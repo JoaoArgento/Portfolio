@@ -1,1 +1,2 @@
-# codigo do pau game e seu amigo
+# Jogos que criei utilizando a biblioteca pygame
+
