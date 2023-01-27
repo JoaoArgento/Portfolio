@@ -1,0 +1,2 @@
+1
+./Sprites/Player/player.bmp

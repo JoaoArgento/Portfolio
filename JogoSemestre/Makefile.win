@@ -1,0 +1,55 @@
+# Project: JogoSemestre
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o G_PLAYER.o G_BULLET.o G_ENEMY.o G_ENEMY_BULLET.o G_SHIELDS.o G_IMG_HANDLE.o G_CONTROLLER.o G_EXPLOSION.o G_METEORS.o
+LINKOBJ  = main.o G_PLAYER.o G_BULLET.o G_ENEMY.o G_ENEMY_BULLET.o G_SHIELDS.o G_IMG_HANDLE.o G_CONTROLLER.o G_EXPLOSION.o G_METEORS.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -lwinmm -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = JogoSemestre.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+G_PLAYER.o: G_PLAYER.cpp
+	$(CPP) -c G_PLAYER.cpp -o G_PLAYER.o $(CXXFLAGS)
+
+G_BULLET.o: G_BULLET.cpp
+	$(CPP) -c G_BULLET.cpp -o G_BULLET.o $(CXXFLAGS)
+
+G_ENEMY.o: G_ENEMY.cpp
+	$(CPP) -c G_ENEMY.cpp -o G_ENEMY.o $(CXXFLAGS)
+
+G_ENEMY_BULLET.o: G_ENEMY_BULLET.cpp
+	$(CPP) -c G_ENEMY_BULLET.cpp -o G_ENEMY_BULLET.o $(CXXFLAGS)
+
+G_SHIELDS.o: G_SHIELDS.cpp
+	$(CPP) -c G_SHIELDS.cpp -o G_SHIELDS.o $(CXXFLAGS)
+
+G_IMG_HANDLE.o: G_IMG_HANDLE.cpp
+	$(CPP) -c G_IMG_HANDLE.cpp -o G_IMG_HANDLE.o $(CXXFLAGS)
+
+G_CONTROLLER.o: G_CONTROLLER.cpp
+	$(CPP) -c G_CONTROLLER.cpp -o G_CONTROLLER.o $(CXXFLAGS)
+
+G_EXPLOSION.o: G_EXPLOSION.cpp
+	$(CPP) -c G_EXPLOSION.cpp -o G_EXPLOSION.o $(CXXFLAGS)
+
+G_METEORS.o: G_METEORS.cpp
+	$(CPP) -c G_METEORS.cpp -o G_METEORS.o $(CXXFLAGS)

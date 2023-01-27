@@ -1,0 +1,3 @@
+2
+./Sprites/Enemies/1.bmp
+./Sprites/Enemies/2.bmp
