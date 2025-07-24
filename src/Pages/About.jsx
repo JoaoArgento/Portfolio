@@ -37,7 +37,7 @@ function AboutSection()
             <ul className = "space-y-2 text-zinc-200">
                 <li><strong>2021 - presente:</strong> Instrutor de desenvolvimento de jogos na SuperGeeks </li>
                 <li><strong>2020 - presente:</strong> Desenvolvimento de projetos pessoais </li>
-                <li><strong>2022 - 2025: </strong> Tecnólogo em jogos digitais (FATEC São Caeatno do sul)</li>
+                <li><strong>2022 - 2025: </strong> Tecnólogo em jogos digitais (FATEC São Caetano do sul)</li>
 
             </ul>
 
