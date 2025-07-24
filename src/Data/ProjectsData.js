@@ -18,8 +18,8 @@ const projects = [
     new Project(
       "Última chance",
       "Jogo de exploração feito utilizando game engine Unity, em conjunto com mais 3 pessoas",
-      "./projects",
-      "./assets/Images/UltimaChance.png",
+      "",
+      "./public/assets/Images/UltimaChance.png",
       "team",
       ["PC"],
       ["itchio"],
@@ -28,8 +28,8 @@ const projects = [
     new Project(
       "Guns and skulls",
       "Jogo top-down 3D baseado no modo zumbi do jogo call of duty. feito utilizando game engine Unity, em conjunto com mais 3 pessoas",
-      "./projects",
-      "./assets/Images/GunsAndSkulls.png",
+      "",
+      "./public/assets/Images/GunsAndSkulls.png",
       "team",
       ["PC"],
       ["itchio"],
@@ -39,7 +39,7 @@ const projects = [
     new Project(
       "Fish Ops",
       "Jogo de sobrevivência 2.5D feito em uma GAME JAM",
-      "./projects",
+      "",
       "./assets/Images/FishOps.gif",
       "indie",
       ["PC"],
@@ -50,7 +50,7 @@ const projects = [
     new Project(
         "Idle Miner",
         "Jogo de Idle 2D",
-        "./projects",
+        "",
         "./assets/Images/IdleMiner.png",
         "team",
         ["Mobile"],

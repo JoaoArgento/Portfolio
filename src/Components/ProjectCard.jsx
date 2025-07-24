@@ -59,10 +59,10 @@ export default function ProjectCard(props)
                               if (platform == "exe")
                               {
                                   return <a key = {index} 
-                                  href = {`./src/assets/EXEs/${nameWithoutSpace}Exe.zip`}
+                                  href = {`/assets/EXEs/${nameWithoutSpace}Exe.zip`}
                                   download
                                   rel = "noopener noreferrer"
-                                  className = {`disabled inline-block align-center mt-4 px-4 py-2 text-white rounded hover:brightness-104 transition ${buttonStyle.color}`}
+                                  className = {`inline-block align-center mt-4 px-4 py-2 text-white rounded hover:brightness-104 transition ${buttonStyle.color}`}
                                 >
                                 {`${buttonStyle.innerText}`}
                                 </a> 
@@ -71,7 +71,7 @@ export default function ProjectCard(props)
                                       href = {props.project.link} 
                                       target = "_blank"
                                       rel = "noopener noreferrer"
-                                      className = {` disabled inline-block align-center mt-4 px-4 py-2 text-white rounded hover:brightness-104 transition ${buttonStyle.color}`}
+                                      className = {` ${props.project.link == "" ? "disabled" : ""} inline-block align-center mt-4 px-4 py-2 text-white rounded hover:brightness-104 transition ${buttonStyle.color}`}
                                     >
                                     {`${buttonStyle.innerText} (${props.project.status})`}
                                     </a> 
