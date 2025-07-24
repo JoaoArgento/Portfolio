@@ -4,7 +4,7 @@ import { TbBrandCSharp, TbRadar } from "react-icons/tb";
 import { useTypewriter } from "react-simple-typewriter";
 import typewriterInfo from "../functions/TextDatabase.js"
 import { useRef, useState } from "react";
-
+import { Link } from "react-router-dom";
 export default function Hero()
 {
     const originalText = ["Game Programmer", "Game Designer"]
@@ -56,9 +56,9 @@ export default function Hero()
             </h1>
 
         
-            <a href ="/projects" className = "bg-indigo-600 hover:bg-hover-700 text-white px-6 py-3 rounded-lg font-medium transtion duration 300">
+            <Link href ="/projects" className = "bg-indigo-600 hover:bg-hover-700 text-white px-6 py-3 rounded-lg font-medium transtion duration 300">
                 Ver meus projetos
-            </a>
+            </Link>
 
         </div>
         <div className = "mt-10 flex flex-wrap justify-center gap-4">
