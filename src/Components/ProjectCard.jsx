@@ -28,10 +28,8 @@ const buttonTypes =
 
 export default function ProjectCard(props)
 {
-    return  <a key = {props.key}
-            href = {props.project.link}
-            target = "_blank"
-            rel ="noopener noreferrer"
+    return  <div key = {props.key}
+          
             className ="card-shine bg-gradient-to-t from-[#1e1e2] to-[#2c2c3c] rounded-lg shadow-md p-4 max-w-sm transition-transform duration-300 hover: scale-[1.02] shadow-md">
                         
                         <div className = "w-full h-full flex flex-col items-center justify-between">
@@ -80,5 +78,5 @@ export default function ProjectCard(props)
                         } 
                        
                         </div>
-                  </a>
+                  </div>
 }
