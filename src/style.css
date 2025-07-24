@@ -1,0 +1,48 @@
+@import "tailwindcss";
+/* 
+.myNavbar
+{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,6,31,1) 35%, rgba(105,111,112,1) 100%);
+} */
+
+
+*{
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.card-shine
+{
+  position: relative;
+  overflow: hidden;
+}
+.card-shine::before
+{
+  content:"";
+  position:absolute;
+  top: -50%;
+  left: -75%;
+  width: 20%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+.card-shine:hover::before
+{
+    animation: shine 0.7s linear infinite;
+}
+
+
+@keyframes shine
+{
+    0%
+    {
+        left: -75%;
+    }
+    100%
+    {
+        left: 125%;
+    }
+}
