@@ -34,6 +34,12 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,6,31,1) 35%, rgba(1
     animation: shine 0.7s linear infinite;
 }
 
+.disabled 
+{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 
 @keyframes shine
 {
