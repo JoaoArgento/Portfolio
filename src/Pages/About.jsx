@@ -42,7 +42,7 @@ function AboutSection()
             </ul>
 
             <div className="flex flex-col items-center">
-                <a  href = "./assets/Images/Curriculo.pdf"
+                <a  href = "./assets/Curriculos/Curriculo.pdf"
                 download
                 className = "mt-10 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300"
                 >
