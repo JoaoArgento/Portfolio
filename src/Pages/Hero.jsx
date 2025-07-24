@@ -56,7 +56,7 @@ export default function Hero()
             </h1>
 
         
-            <Link href ="/projects" className = "bg-indigo-600 hover:bg-hover-700 text-white px-6 py-3 rounded-lg font-medium transtion duration 300">
+            <Link to ="/projects" className = "bg-indigo-600 hover:bg-hover-700 text-white px-6 py-3 rounded-lg font-medium transtion duration 300">
                 Ver meus projetos
             </Link>
 
