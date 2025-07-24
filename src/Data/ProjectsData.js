@@ -38,7 +38,7 @@ const projects = [
 
     new Project(
       "Fish Ops",
-      "Jogo de sobrevivência 2.5D feito em uma GAME JAM ",
+      "Jogo de sobrevivência 2.5D feito em uma GAME JAM",
       "./projects",
       "./assets/Images/FishOps.gif",
       "indie",
