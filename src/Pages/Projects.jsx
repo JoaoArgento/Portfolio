@@ -2,15 +2,11 @@ import React from "react";
 import {Link} from "react-router-dom";
 import Layout from "./Layout";
 import { FaItchIo } from "react-icons/fa";
-import {projects} from "../Data/ProjectsData.js"
+import {categorizedProjects} from "../Data/ProjectsData.js"
 import ProjectCard from "../Components/ProjectCard.jsx";
 
-const categorizedProjects = 
-{
-  indie: projects.filter((p) => p.category == "indie"),
-  team: projects.filter((p) => p.category == "team"),
-}
-function renderSection(title, titleColor, items) 
+
+function RenderSection(title, titleColor, items) 
 {
   const targetColor = {
       white: "text-white-500",
@@ -26,8 +22,8 @@ function renderSection(title, titleColor, items)
             {
               items.map((project, index) => 
               {
-                // const targetPlatform = project.availablePlatforms[0];
-                // const platformStyle = styleByPlatform[targetPlatform];
+                // const targetPlatform = project.distributionPlatforms[0];
+                // const targetPlatformstyle = styleByPlatform[targetPlatform];
 
                 return   <ProjectCard 
                             key = {index}
@@ -42,11 +38,12 @@ function renderSection(title, titleColor, items)
 
 function RenderAllProjects()
 {
- return <div class = "w-full h-full relative">
+ return <div className = "w-full h-full relative">
        <section className="text-white min-h-screen flex flex-col items-center py-10 px-5">
 
-          {renderSection("Experimental Games", "orange", categorizedProjects.indie)}
-          {renderSection("Pólen Studios", "orange", categorizedProjects.team)}
+          {RenderSection("EXPERIMENTAL", "orange", categorizedProjects.experimental)}
+          {RenderSection("SOLO", "orange", categorizedProjects.solo)}
+          {RenderSection("PÓLEN STUDIOS", "orange", categorizedProjects.team)}
       </section>
   </div>
 }

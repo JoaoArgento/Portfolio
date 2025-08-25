@@ -28,15 +28,15 @@ const buttonTypes =
 
 export default function ProjectCard(props)
 {
-    return  <div key = {props.key}
+    return  <div
           
-            className ="card-shine bg-gradient-to-t from-[#1e1e2] to-[#2c2c3c] rounded-lg shadow-md p-4 max-w-sm transition-transform duration-300 hover: scale-[1.02] shadow-md">
+            className ="bg-gradient-to-t from-[#1e1e2] to-[#2c2c3c] rounded-lg shadow-md p-4 max-w-sm transition-transform duration-300 hover: scale-[1.02] shadow-md">
                         
                         <div className = "w-full h-full flex flex-col items-center justify-between">
                            <h3 className ={`text-xl font-semibold ${props.fontColor}`}>{props.project.title}</h3>
 
                             <h3 className = "text-md text-cyan-300">
-                              {props.project.platforms.join(", ")}
+                              {props.project.targetPlatforms.join(", ")}
                             </h3>
 
                           <div className = "overflow-hidden rounded-md my-2">
@@ -50,7 +50,7 @@ export default function ProjectCard(props)
                           <p className="text-white-400">{props.project.description}</p>
 
                          {
-                          props.project.availablePlatforms.map((platform, index) =>
+                          props.project.distributionPlatforms.map((platform, index) =>
                           {
                             const buttonStyle = buttonTypes[platform]
                             const nameWithoutSpace = props.project.title.replace(" ", "");

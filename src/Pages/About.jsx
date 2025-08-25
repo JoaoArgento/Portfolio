@@ -25,9 +25,10 @@ function AboutSection()
             </h3>
 
             <ul className = "space-y-2 text-zinc-200">
-                <li>Unity C#</li>
-                <li>Programação de jogos</li>   
-
+                <li>Unity - C#</li>
+                <li>Godot - GDScript </li>
+                <li>Linguagens de programação: C, C++, C#, Python, Javascript</li>
+                
             </ul>
                 
             <h3 className="text-2xl font-semibold mt-10 mb-4 text-indigo-300">
@@ -37,7 +38,7 @@ function AboutSection()
             <ul className = "space-y-2 text-zinc-200">
                 <li><strong>2021 - presente:</strong> Instrutor de desenvolvimento de jogos na SuperGeeks </li>
                 <li><strong>2020 - presente:</strong> Desenvolvimento de projetos pessoais </li>
-                <li><strong>2022 - 2025: </strong> Tecnólogo em jogos digitais (FATEC São Caetano do sul)</li>
+                <li><strong>2022 - 2025: </strong> Tecnólogo em jogos digitais - FATEC São Caetano do sul</li>
 
             </ul>
 
