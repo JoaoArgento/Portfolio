@@ -110,12 +110,12 @@ const teamProjects = [
     new Project(
         "Idle Miner",
         "Jogo de Idle 2D",
-        "",
+        "https://play.google.com/store/apps/details?id=com.PolenGameStudio.com.unity.template.mobile2D",
         "./assets/Images/IdleMiner.png",
         categories.team,
         [targetPlatforms.Mobile],
         [distributionPlatforms.playStore],
-        gameState.ClosedAlpha,
+        gameState.OpenBeta,
         gameTypeEnum.IdleMiner,
     ),
 
@@ -134,18 +134,18 @@ const teamProjects = [
 ]
 
 const soloProjects = [
-  new Project(
-    "Pong Multiplayer",
-    "Replica do jogo pong de 1972, Porém em multiplayer local. Fiz esse jogo para praticar minhas habilidades "+
-    "em netcode for gameObjects",
-    "",
-    "./assets/Images/...AColocar!!!",
-    categories.solo,
-    [targetPlatforms.PC],
-    [distributionPlatforms.exe, distributionPlatforms.github],
-    gameState.Soon,
-    gameTypeEnum.PongMultiplayer,
-  ),
+  // new Project(
+  //   "Pong Multiplayer",
+  //   "Replica do jogo pong de 1972, Porém em multiplayer local. Fiz esse jogo para praticar minhas habilidades "+
+  //   "em netcode for gameObjects",
+  //   "",
+  //   "./assets/Images/...AColocar!!!",
+  //   categories.solo,
+  //   [targetPlatforms.PC],
+  //   [distributionPlatforms.exe, distributionPlatforms.github],
+  //   gameState.Soon,
+  //   gameTypeEnum.PongMultiplayer,
+  // ),
 
    new Project(
     "Fishmon",
