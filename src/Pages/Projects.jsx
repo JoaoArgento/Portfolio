@@ -4,7 +4,8 @@ import Layout from "./Layout";
 import { FaItchIo } from "react-icons/fa";
 import {categorizedProjects} from "../Data/ProjectsData.js"
 import ProjectCard from "../Components/ProjectCard.jsx";
-
+import { translationType, GetTranslationByType } from "../Data/Translations/AllTranslations.js";
+import { UseLanguage } from "../Components/LanguageProvider.jsx";
 
 function RenderSection(title, titleColor, items) 
 {
@@ -16,19 +17,31 @@ function RenderSection(title, titleColor, items)
 
   }[titleColor]
 
+  const {currentLanguage, ChangeLanguage} = UseLanguage();
+
+
   return <>
         <h3 className = "text-2xl font-bold text-white mt-10 mb-4">{title}</h3>
         <div className = "grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl">
             {
               items.map((project, index) => 
               {
-                // const targetPlatform = project.distributionPlatforms[0];
-                // const targetPlatformstyle = styleByPlatform[targetPlatform];
+            
+                const projectInfo = GetTranslationByType(translationType.projectInfo, project.gameType, currentLanguage);
+                const projectState = GetTranslationByType(translationType.gameState, project.gameState, currentLanguage);
+                                
+                let projectDescription = ""
+                if (projectInfo != null)
+                {
+                  projectDescription = projectInfo.description;
+                }
 
                 return   <ProjectCard 
                             key = {index}
                             project = {project}
-                            fontColor = {targetColor}/>
+                            fontColor = {targetColor}
+                            projectDescription = {projectDescription}
+                            projectState = {projectState}/>
               })
             }
         </div>

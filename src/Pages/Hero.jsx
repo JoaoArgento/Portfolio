@@ -5,8 +5,12 @@ import { useTypewriter } from "react-simple-typewriter";
 import typewriterInfo from "../functions/TextDatabase.js"
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { UseLanguage } from "../Components/LanguageProvider.jsx";
+import { menuTranslations } from "../Data/Translations/PagesTranslations.js";
 export default function Hero()
 {
+    const {currentLanguage, ChangeLanguage} = UseLanguage();
+
     const originalText = ["Game Programmer", "Game Designer"]
     const [currentText, SetCurrentText] = useState(originalText);
     const nextTechRef = useRef(null);
@@ -27,7 +31,6 @@ export default function Hero()
 
         if (typedText.current.length === 0 && nextTechRef.current)
         {
-            console.log("tem lang");
             SetCurrentText(typewriterInfo.programmingTexts[nextTechRef.current]);
             nextTechRef.current = null;
         }
@@ -57,7 +60,7 @@ export default function Hero()
 
         
             <Link to ="/projects" className = "bg-indigo-600 hover:bg-hover-700 text-white px-6 py-3 rounded-lg font-medium transtion duration 300">
-                Ver meus projetos
+                {menuTranslations.projectButton[currentLanguage]}
             </Link>
 
         </div>

@@ -1,53 +1,54 @@
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
-
+import { GetCurrentLanguage } from "../Data/Translations/TranslationInfo";
+import { aboutTranslations } from "../Data/Translations/PagesTranslations";
+import { UseLanguage } from "../Components/LanguageProvider";
 function AboutSection()
 {
+    const {currentLanguage, ChangeLanguage} = UseLanguage();
+    
     return <section className = "flex flex-col justify-center items-center px-6 py-16 text-white">
         <div className="max-w-4xl w-full h-full ">
             <h2 className = "text-4xl font-bold mb-6 text-center"> 
-                Sobre mim
+                {aboutTranslations.aboutMe[currentLanguage].title}
             </h2>
             <p className ="text-lg leading-relaxed text-zinc-300">
-               Trabalho profissionalmente na área há mais de quatro anos, com foco no desenvolvimento de jogos, utilizando o Unity como minha principal ferramenta.
-                <br/>
-                <br/>
-                Sempre fui movido pela curiosidade, especialmente por sistemas complexos e como eles funcionam por debaixo dos panos.
-                <br/>
-                <br/>
-                Essa motivação me levou a aprofundar meus conhecimentos em programação e arquitetura de código.
-                Atualmente, meu principal foco é continuar desenvolvendo minha capacidade de resolver problemas complexos com soluções simples, mantendo o projeto organizado e fácil de manter.
-
+              {aboutTranslations.aboutMe[currentLanguage].text}
             </p>
             
             <h3 className="text-2xl font-semibold mt-10 mb-4 text-indigo-300">
-                Experiências
+                {aboutTranslations.experience[currentLanguage].title}
             </h3>
 
             <ul className = "space-y-2 text-zinc-200">
                 <li>Unity - C#</li>
                 <li>Godot - GDScript </li>
-                <li>Linguagens de programação: C, C++, C#, Python, Javascript</li>
+                <li>{aboutTranslations.experience[currentLanguage]["programmingLanguageText"]}: C, C++, C#, Python, Javascript</li>
                 
             </ul>
                 
             <h3 className="text-2xl font-semibold mt-10 mb-4 text-indigo-300">
-                Minha jornada
+                {aboutTranslations.journey[currentLanguage].title}
             </h3>
             
             <ul className = "space-y-2 text-zinc-200">
-                <li><strong>2021 - presente:</strong> Instrutor de desenvolvimento de jogos na SuperGeeks </li>
+                {/* <li><strong>2021 - presente:</strong> Instrutor de desenvolvimento de jogos na SuperGeeks </li>
                 <li><strong>2020 - presente:</strong> Desenvolvimento de projetos pessoais </li>
-                <li><strong>2022 - 2025: </strong> Tecnólogo em jogos digitais - FATEC São Caetano do sul</li>
-
+                <li><strong>2022 - 2025: </strong> Tecnólogo em jogos digitais - FATEC São Caetano do sul</li> */}
+                {
+                    aboutTranslations.journey[currentLanguage].journeys.map((journey, index) =>
+                    {
+                        return <li><strong>{journey.date}: </strong>{journey.occupation}</li>
+                    })
+                }
             </ul>
 
             <div className="flex flex-col items-center">
-                <a  href = "./assets/Curriculos/Curriculo.pdf"
+                <a  href = {aboutTranslations.cvButton[currentLanguage].link}
                 download
                 className = "mt-10 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300"
                 >
-                Baixar CV
+                {aboutTranslations.cvButton[currentLanguage].text}
             </a>
 
             </div>

@@ -1,8 +1,17 @@
 import { PiCableCar } from "react-icons/pi";
-
+let gameTypeEnum = 
+{
+    UltimaChance: "UltimaChance",
+    FishOps: "FishOps",
+    SpaceOdyssey: "SpaceOdyssey",
+    PongMultiplayer: "PongMultiplayer",
+    GunsAndSkulls: "GunsAndSkulls",
+    IdleMiner: "IdleMiner",
+    Fishmon: "Fishmon",
+}
 class Project
 {
-  constructor(title, description, link, logo, category, targetPlatforms, distributionPlatforms, status)
+  constructor(title, description, link, logo, category, targetPlatforms, distributionPlatforms, gameState, gameType)
   {
     this.title = title;
     this.description = description;
@@ -11,7 +20,8 @@ class Project
     this.category = category;
     this.targetPlatforms = targetPlatforms;
     this.distributionPlatforms = distributionPlatforms;
-    this.status = status;
+    this.gameState = gameState;
+    this.gameType = gameType;
   }
 }
 
@@ -20,6 +30,7 @@ let categories = {
   team : "team",
   solo: "solo",
 }
+
 let targetPlatforms = {
   PC: "pc",
   Mobile: "Mobile",
@@ -36,11 +47,11 @@ let distributionPlatforms =
 
 let gameState =
 {
-  Finished: "Concluido",
-  Soon: "Em breve",
-  OpenBeta: "Beta aberto",
-  ClosedBeta: "Beta fechado",
-  ClosedAlpha: "Alpha fechado",
+  Finished: "Finished",
+  Soon: "Soon",
+  OpenBeta: "OpenBeta",
+  ClosedBeta: "ClosedBeta",
+  ClosedAlpha: "ClosedAlpha",
 
 } 
 
@@ -55,6 +66,7 @@ const experimentalProjects = [
         [targetPlatforms.PC],
         [distributionPlatforms.github],
         gameState.Finished,
+        gameTypeEnum.SpaceOdyssey,
     ),
 
   new Project(
@@ -66,6 +78,7 @@ const experimentalProjects = [
       [targetPlatforms.PC],
       [distributionPlatforms.exe, distributionPlatforms.github],
       gameState.Soon,
+      gameTypeEnum.FishOps,
     ),
 
   new Project(
@@ -77,18 +90,19 @@ const experimentalProjects = [
       [targetPlatforms.PC],
       [distributionPlatforms.exe, distributionPlatforms.github, distributionPlatforms.itchio],
       gameState.Soon,
+      gameTypeEnum.GunsAndSkulls,
     ),
 
-  new Project(
-      "Guitar game",
-      "Minigame de guitarra inspirado no jogo Guitar hero em conjunto com mais 3 pessoas",
-      "",
-      "./assets/Images/UltimaChance.png",
-      categories.experimental,
-      [targetPlatforms.PC],
-      [distributionPlatforms.exe, distributionPlatforms.github],
-      gameState.Finished,
-    ),
+  // new Project(
+  //     "Guitar game",
+  //     "Minigame de guitarra inspirado no jogo Guitar hero feito em conjunto com mais 3 pessoas",
+  //     "",
+  //     "./assets/Images/UltimaChance.png",
+  //     categories.experimental,
+  //     [targetPlatforms.PC],
+  //     [distributionPlatforms.exe, distributionPlatforms.github],
+  //     gameState.Finished,
+  //   ),
 ]
 
 const teamProjects = [
@@ -102,17 +116,19 @@ const teamProjects = [
         [targetPlatforms.Mobile],
         [distributionPlatforms.playStore],
         gameState.ClosedAlpha,
+        gameTypeEnum.IdleMiner,
     ),
 
     new Project(
       "Última chance",
-      "Jogo de exploração feito utilizando game engine Unity, em conjunto com mais 3 pessoas",
+      "Jogo de exploração feito utilizando game engine Unity, feito em conjunto com mais 3 pessoas",
       "",
       "./assets/Images/UltimaChance.png",
       categories.team,
       [targetPlatforms.PC],
       [distributionPlatforms.itchio, distributionPlatforms.exe],
       gameState.Soon,
+      gameTypeEnum.UltimaChance,
     ),
 
 ]
@@ -128,6 +144,20 @@ const soloProjects = [
     [targetPlatforms.PC],
     [distributionPlatforms.exe, distributionPlatforms.github],
     gameState.Soon,
+    gameTypeEnum.PongMultiplayer,
+  ),
+
+   new Project(
+    "Fishmon",
+    "Fishmon é um jogo de pesca inspirado em clássicos de captura e batalhas por turnos." + 
+    "Explore rios, lagos e mares em busca de criaturas aquáticas únicas, cada uma com habilidades próprias. Use suas redes de pesca para capturar, monte sua equipe e enfrente batalhas estratégicas no melhor estilo RPG!",
+    "https://joaozera1.itch.io/fishmon",
+    "./assets/Images/Fishmon.png",
+    categories.solo,
+    [targetPlatforms.PC],
+    [distributionPlatforms.github, distributionPlatforms.itchio],
+    gameState.OpenBeta,
+    gameTypeEnum.Fishmon,
   ),
 ]
 

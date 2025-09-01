@@ -47,7 +47,7 @@ export default function ProjectCard(props)
                             />
                           </div>
 
-                          <p className="text-white-400">{props.project.description}</p>
+                          <p className="text-white-400">{props.projectDescription}</p>
 
                          {
                           props.project.distributionPlatforms.map((platform, index) =>
@@ -71,7 +71,7 @@ export default function ProjectCard(props)
                                       rel = "noopener noreferrer"
                                       className = {` ${props.project.link == "" ? "disabled" : ""} inline-block align-center mt-4 px-4 py-2 text-white rounded hover:brightness-104 transition ${buttonStyle.color}`}
                                     >
-                                    {`${buttonStyle.innerText} (${props.project.status})`}
+                                    {`${buttonStyle.innerText} (${props.projectState})`}
                                     </a> 
 
                           })
