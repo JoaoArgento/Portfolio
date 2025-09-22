@@ -73,12 +73,13 @@ const projectTranslations =
     {
         en:
         {
-            description: "2.5D survival game made in a GAME JAM in pairs. My partner was the artist Jorge Azevedo.",
+            description: "A 2D game developed in a group using the C language, based on the Atari Space Invaders. The game also features a menu created using the raycast technique, the same one used in Doom and Wolfenstein 3D.",
         },
 
         pt_br:
         {
-            description: "Jogo de sobrevivência 2.5D feito em uma GAME JAM em duplas. Minha dupla foi o artista Jorge Azevedo.",
+            description: "Jogo 2D feito em grupo usando a linguagem C, Baseado no Space Invaders Atari. Além disso, o jogo conta com um menu criado " + 
+            "utilizando a tecnica raycast, a mesma usada no jogo doom e wolfenstein 3D.",
         }
     },
 
