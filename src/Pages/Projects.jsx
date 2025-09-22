@@ -4,8 +4,8 @@ import Layout from "./Layout";
 import { FaItchIo } from "react-icons/fa";
 import {categorizedProjects} from "../Data/ProjectsData.js"
 import ProjectCard from "../Components/ProjectCard.jsx";
-import { translationType, GetTranslationByType } from "../Data/Translations/AllTranslations.js";
 import { UseLanguage } from "../Components/LanguageProvider.jsx";
+import { gameStateTranslations, projectTranslations } from "../Data/Translations/ProjectTranslations.js";
 
 function RenderSection(title, titleColor, items) 
 {
@@ -27,8 +27,8 @@ function RenderSection(title, titleColor, items)
               items.map((project, index) => 
               {
             
-                const projectInfo = GetTranslationByType(translationType.projectInfo, project.gameType, currentLanguage);
-                const projectState = GetTranslationByType(translationType.gameState, project.gameState, currentLanguage);
+                const projectInfo = projectTranslations[project.gameType][currentLanguage];
+                const projectState = gameStateTranslations[project.gameState][currentLanguage];
                                 
                 let projectDescription = ""
                 if (projectInfo != null)

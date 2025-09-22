@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
-import { GetCurrentLanguage } from "../Data/Translations/TranslationInfo";
 import { aboutTranslations } from "../Data/Translations/PagesTranslations";
 import { UseLanguage } from "../Components/LanguageProvider";
 function AboutSection()

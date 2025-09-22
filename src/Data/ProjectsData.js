@@ -88,7 +88,7 @@ const experimentalProjects = [
       "./assets/Images/GunsAndSkulls.png",
       categories.experimental,
       [targetPlatforms.PC],
-      [distributionPlatforms.exe, distributionPlatforms.github, distributionPlatforms.itchio],
+      [distributionPlatforms.exe],
       gameState.Soon,
       gameTypeEnum.GunsAndSkulls,
     ),
